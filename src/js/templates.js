@@ -19,15 +19,13 @@ function print() { __p += __j.call(arguments, '') }
 with (obj) {
 __p += '<div class="iapp-detail-inner-wrap">\n    <h2 class="iapp-detail-head">' +
 ((__t = (full_state)) == null ? '' : __t) +
-'</h2>\n    <div class="iapp-detail-group">\n            <span class="iapp-detail-data-label">Total Dead: </span>\n            <span class="iapp-detail-data-text label label-primary">' +
+'</h2>\n    <div class="iapp-detail-group">\n            <span class="iapp-detail-data-label">Total Vacancies: </span>\n            <span class="iapp-detail-data-text label label-primary">' +
 ((__t = ( total_pretty )) == null ? '' : __t) +
-'</span>\n        </div>\n    <h3 class="iapp-detail-sub-head">Breakdown of deaths</h3>\n    <div class="iapp-detail-chart"></div>\n    <div class="iapp-detail-key">\n        <div class="iapp-detail-key-item">\n            <span class="iapp-detail-key-color police"></span>\n            <span class="iapp-detail-key-text">Police: </span>\n            <br/>\n            <span class="iapp-detail-key-item-number">' +
+'</span>\n        </div>\n    <h3 class="iapp-detail-sub-head">National Overview</h3>\n    <div class="iapp-detail-chart"></div>\n    <div class="iapp-detail-key">\n        <div class="iapp-detail-key-item">\n            <span class="iapp-detail-key-color police"></span>\n            <span class="iapp-detail-key-text">Vacant Positions: </span>\n            <br/>\n            <span class="iapp-detail-key-item-number">' +
 ((__t = (police)) == null ? '' : __t) +
-'</span>\n        </div>\n        <div class="iapp-detail-key-item">\n            <span class="iapp-detail-key-color driver"></span>\n            <span class="iapp-detail-key-text">Fleeing Drivers:</span>\n            <br/>\n            <span class="iapp-detail-key-item-number">' +
+'</span>\n        </div>\n        <div class="iapp-detail-key-item">\n            <span class="iapp-detail-key-color driver"></span>\n            <span class="iapp-detail-key-text">Filled Positions:</span>\n            <br/>\n            <span class="iapp-detail-key-item-number">' +
 ((__t = (fleeing_driver)) == null ? '' : __t) +
-'</span>\n        </div>\n        <div class="iapp-detail-key-item">\n            <span class="iapp-detail-key-color non-violator"></span>\n            <span class="iapp-detail-key-text">Non-violators: </span>\n            <br/>\n            <span class="iapp-detail-key-item-number">';
-print(bystanders + fleeing_other);
-__p += '</span>\n        </div>\n    </div>\n    <h3 class="iapp-detail-sub-head">Top Counties</h3>\n    <table class="table table-condensed">\n        <thead>\n            <tr>\n                <th>County</th>\n                <th>Total Dead</th>\n                <th>Police</th>\n                <th>Fleeing Drivers</th>\n                <th>Non-violators</th>\n            </tr>\n        </thead>\n        <tbody>\n        ';
+'</span>\n        </div>\n\n        <!-- I removed one of the key items here -->\n    </div>\n    <h3 class="iapp-detail-sub-head">Most Affected Hospitals</h3>\n    <table class="table table-condensed">\n        <thead>\n            <tr>\n                <th>Hospital Name</th>\n                <th>City</th>\n                <th>State</th>\n                <th>Overall vacancy</th>\n                <th>Critical Job</th>\n                <th>Critical Vacancy</th>\n            </tr>\n        </thead>\n        <tbody>\n        ';
  _.each(top_10, function(county) { ;
 __p += '\n            <tr>\n                <td>' +
 ((__t = ( county.county )) == null ? '' : __t) +
@@ -68,6 +66,53 @@ with (obj) {
 __p += '<h2 class="iapp-search-entry-title">' +
 ((__t = ( full_state )) == null ? '' : __t) +
 '</h2>\n';
+
+}
+return __p
+};
+
+this["templates"]["HospitalView.html"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+__p += '<div class="iapp-detail-inner-wrap">\n    <h2 class="iapp-detail-head">' +
+((__t = (full_state)) == null ? '' : __t) +
+'</h2>\n    <div class="iapp-detail-group">\n            <span class="iapp-detail-data-label">Total Vacancies: </span>\n            <span class="iapp-detail-data-text label label-primary">' +
+((__t = ( total_pretty )) == null ? '' : __t) +
+'</span>\n        </div>\n    <h3 class="iapp-detail-sub-head">Hospital Overview</h3>\n    <div class="iapp-detail-chart"></div>\n    <div class="iapp-detail-key">\n        <div class="iapp-detail-key-item">\n            <span class="iapp-detail-key-color police"></span>\n            <span class="iapp-detail-key-text">Vacant Positions: </span>\n            <br/>\n            <span class="iapp-detail-key-item-number">' +
+((__t = (police)) == null ? '' : __t) +
+'</span>\n        </div>\n        <div class="iapp-detail-key-item">\n            <span class="iapp-detail-key-color driver"></span>\n            <span class="iapp-detail-key-text">Filled Positions:</span>\n            <br/>\n            <span class="iapp-detail-key-item-number">' +
+((__t = (fleeing_driver)) == null ? '' : __t) +
+'</span>\n        </div>\n    </div>\n    <h3 class="iapp-detail-sub-head">Hospital Breakdown</h3>\n    <table class="table table-condensed">\n        <thead>\n            <tr>\n                <th>Overall Vacancy</th>\n                <th>Scheduler</th>\n                <th>Nurse</th>\n                <th>Physical Therapist</th>\n                <th>Physician</th>\n                <th>Physician Assistant</th>\n                <th>Psychology</th>\n            </tr>\n        </thead>\n        <tbody>\n        ';
+ _.each(top_10, function(county) { ;
+__p += '\n            <tr>\n                <td>' +
+((__t = ( county.county )) == null ? '' : __t) +
+'</td>\n                <td class="table-number">' +
+((__t = ( county.total_dead )) == null ? '' : __t) +
+'</td>\n                <td class="table-number">' +
+((__t = ( county.police )) == null ? '' : __t) +
+'</td>\n                <td class="table-number">' +
+((__t = ( county.fleeing_driver )) == null ? '' : __t) +
+'</td>\n                <td class="table-number">';
+ print(county.bystanders + county.fleeing_other) ;
+__p += '</td>\n            </tr>\n        ';
+ }); ;
+__p += '\n        </tbody>\n    </table>\n</div>\n<div class="iapp-detail-share-wrap">\n    <span class="iapp-detail-share-button">Share</span>\n    <div class="iapp-share-icon-wrap">\n        <a href="https://twitter.com/intent/tweet?url=' +
+((__t = (twitterShare)) == null ? '' : __t) +
+'&text=' +
+((__t = (encodedShare)) == null ? '' : __t) +
+'" class="iapp-share-button iapp-share-icon iapp-share-twitter iapp-share-popup" target="_blank"><img src="http://www.gannett-cdn.com/experiments/usatoday/2015/07/rape-kits/img/twitter.svg" alt="Twitter share"></a>\n        <a href=\'https://www.facebook.com/dialog/feed?display=popup&app_id=' +
+((__t = (fb_id)) == null ? '' : __t) +
+'&link=' +
+((__t = (fbShare)) == null ? '' : __t) +
+'&picture=' +
+((__t = (stillimage)) == null ? '' : __t) +
+'&name=&description=' +
+((__t = (encodedShare)) == null ? '' : __t) +
+'&redirect_uri=' +
+((__t = (fb_redirect)) == null ? '' : __t) +
+'\' class="iapp-share-button iapp-share-icon iapp-share-facebook iapp-share-popup" target="_blank"><img src="http://www.gannett-cdn.com/experiments/usatoday/2015/07/rape-kits/img/facebook.svg" alt="Facebook share"></a>\n    </div>\n</div>\n';
 
 }
 return __p
