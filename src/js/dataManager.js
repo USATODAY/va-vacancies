@@ -22,8 +22,8 @@ define([
                 var _this = this;
                 var proxyDataURL = this.getDataURL();
                 jQuery.getJSON(proxyDataURL, function(data) {
-                    var parsedData = _this.parseData(data);
-                    return callback(parsedData);
+                    _this.data = data;
+                    return callback(_this.data);
                 });
             };
             this.parseData = parseFunction || function(data) { return data; };

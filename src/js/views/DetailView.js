@@ -15,9 +15,14 @@ define([
             this.render();
         },
         render: function() {
-            this.$el.html(this.template(this.model.toJSON()));
+            if (this.model.get("facility") == "National") {
+                this.$el.html(this.nationalTemplate(this.model.toJSON()));
+            } else {
+                this.$el.html(this.template(this.model.toJSON()));
+            }
         },
-        template: templates["DetailView.html"],
+        template: templates["HospitalView.html"],
+        nationalTemplate: templates["NationalView.html"],
         events: {
             "click .iapp-detail-share-button": "onShareClick",
             "click .iapp-share-icon": "onShareButtonClick"
@@ -63,7 +68,7 @@ define([
             var barHeight = 30;
             var height = 30;
             var modelJSON = this.model.toJSON();
-            var data = [modelJSON.police, modelJSON.fleeing_driver, modelJSON.bystanders + modelJSON.fleeing_other];
+            var data = [modelJSON.overall_percent_vacant, (100 - modelJSON.overall_percent_vacant)];
             var transition = 500;
             if (simple) {
                 transition = 0;

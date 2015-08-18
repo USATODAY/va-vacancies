@@ -3,8 +3,8 @@ import json
 import os
 import datetime
 import re
- 
-import crash_tools
+
+import parse_data
 
 source_file = os.path.join(os.path.dirname(__file__), 'input/data.xlsx')
 output_json_file = os.path.join(os.path.dirname(__file__), 'output/data.json')
@@ -58,7 +58,7 @@ def format_data():
     print "Reading file..."
     wb_data = read_wb(wb)
     print "Formatting data..."
-    formatted_data = crash_tools.find_county_data(wb_data["State Breakdown"], wb_data["County Breakdown"])
+    formatted_data = parse_data.parse(wb_data)
     with open (output_json_file, 'w') as output_file:
         json.dump(formatted_data, output_file)
     print "Complete!"

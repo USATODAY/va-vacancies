@@ -18,7 +18,7 @@ define(
             var $pageWrap = jQuery('.iapp-page-wrap');
             dataManager.getData(function(data) {
                 var entriesCollection = new EntriesCollection(data);
-                var appView = new AppView({collection: entriesCollection});
+                var appView = new AppView({collection: entriesCollection, rawData: data});
                 $pageWrap.append(appView.el);
                 Backbone.trigger("detail:draw");
             });

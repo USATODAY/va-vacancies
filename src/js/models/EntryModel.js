@@ -8,8 +8,7 @@ define([
     return Backbone.Model.extend({
         initialize: function() {
             this.set({
-                "total_pretty": this.get("total_dead").toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
-                "slug": helpers.slugify(this.get('state'))
+                "slug": helpers.slugify(this.get('facility'))
             });
             this.setShare();
         },
@@ -38,7 +37,7 @@ define([
         },
 
         createEmailLink: function(videoID) {
-            return "mailto:?body=" + encodeURIComponent(this.get('sharelanguage')) +  "%0d%0d" + this.createTwitterShareURL(videoID) + "&subject=";
+            return "mailto:?body=" + encodeURIComponent(this.get('sharelanguage')) +  "%0d%0d" + this.createTwitterShareURL() + "&subject=";
         }
     });
 });

@@ -5,25 +5,28 @@ define([
    "templates",
    "helpers",
    "config",
+   "dataManager",
    "router",
    "views/ResultsView",
    "views/DetailView",
+   "models/EntryModel",
    "views/VideoView"
-], function(jQuery, _, Backbone, templates, helpers, config, router, ResultsView, DetailView, VideoView) {
+], function(jQuery, _, Backbone, templates, helpers, config, dataManager, router, ResultsView, DetailView, EntryModel, VideoView) {
     return Backbone.View.extend({
-        initialize: function() {
+        initialize: function(opts) {
             this.listenTo(Backbone, "detail:show", this.onDetailShow);
             this.listenTo(Backbone, "video:end", this.onVideoEnd);
             this.listenTo(Backbone, "router:search", this.skipVideo);
             this.listenTo(Backbone, "router:detail", this.onDetailRoute);
             this.listenTo(Backbone, "router:info", this.onInfoRoute);
+            this.rawData = opts.rawData;
             this.render();
         },
         render: function() {
             this.$el.html(this.template({isMobile: config.isMobile || config.isTablet}));
             var videoView = new VideoView();
-
-            var usModel = this.collection.findWhere({'full_state': 'US Total'});
+            var nationalData = _.findWhere(this.rawData, {"facility": "National"});
+            var usModel = new EntryModel(nationalData);
 
             if (config.isMobile || config.isTablet) {
                 this.$('.iapp-mobile-video-container').html(videoView.render().el);
