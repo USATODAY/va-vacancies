@@ -1,0 +1,40 @@
+.iapp-search-results-wrap {
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px $light-grey;
+    @include BoxShadowHelper(1);
+    color: $dark-grey;
+    height: 100%;
+    margin-top: 5px;
+    max-height: 70%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 105;
+}
+
+.iapp-search-results-inner-wrap {
+    height: 100%;
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+}
+
+.iapp-results-entry, .no-results-entry {
+    border-bottom: solid 1px $light-grey;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    &:hover {
+        background-color: $light-grey;
+    }
+}
+
+.iapp-search-entry-title {
+    font-family: "Futura Today DemiBold", Arial, sans-serif;
+    font-size: 1.2em;
+}
+
+.iapp-search-entry-sub {
+    font-family: "Futura Today Light", Arial, sans-serif;
+    font-size: 1em;
+}

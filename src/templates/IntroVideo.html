@@ -1,0 +1,39 @@
+<% if (isMobile || isTablet) { %>
+    <div class="video-wrap video-wrap-mobile"> 
+<% } else { %>
+    <div class="video-wrap"> 
+<% } %>
+    <div class="video-intro-overlay">
+        <div class="video-intro-overlay-content">
+            <h2 class="iapp-header">Police chases kill thousands</h2>
+                <p class="video-intro-overlay-chatter">Nearly every day, someone is killed during a high-speed chase between police and a suspect. Almost half of the 11,500 people killed since 1979 have been bystanders or passengers in fleeing cars. The following interactive graphic lets you analyze the number of deaths in every state and in major counties. It also explains what kinds of people were killed and why deadly chases began.</p>
+            <% if (!isMobile) {%>
+                <div class="iapp-tablet-play-button"><img src="http://www.gannett-cdn.com/experiments/usatoday/2015/07/rape-kits/img/play-icon-white.svg" alt="Play video"></div>
+                <div class="iapp-button iapp-video-skip-button"><div class="iapp-button-text">Search Data</div></div>
+            <% } %>
+        </div>
+        </div>
+        <% if (!isMobile) { %>
+        <!-- Video Controls -->
+        <div class="video-close-button iapp-button" style="display: none"><div class="iapp-button-text">Skip Video</div></div>
+        <div id="video-controls" class="">
+            <div id="play-pause" class="play"></div>
+            <div id="seek-bar">
+                <div id="video-dot"></div>
+            </div>
+        </div> 
+        <% } %>
+        <% if (!isMobile) { %>
+        <video id="introvid" class="bgvideo" poster="http://www.gannett-cdn.com/experiments/usatoday/2015/07/police-chases/img/video_still.jpg">
+        <% } else { %>
+        <video id="introvid" class="bgvideo" controls poster="http://www.gannett-cdn.com/experiments/usatoday/2015/07/police-chases/img/video_still.jpg">
+        <% } %>
+            <source src="http://www.gannett-cdn.com/experiments/usatoday/2015/07/police-chases/media/<%= video_name%>.mp4" type="video/mp4" />
+            <source src="http://www.gannett-cdn.com/experiments/usatoday/2015/07/police-chases/media/<%= video_name%>.ogv" type="video/ogg" />
+        </video>
+        <% if (isMobile || isTablet) { %>
+            <div class="iapp-button iapp-video-skip-button"><div class="iapp-button-text">Search Data</div></div>
+        <% } %>
+</div>
+
+

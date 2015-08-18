@@ -1,0 +1,201 @@
+.iapp-detail-wrap {
+    bottom: 0;
+    color: $dark-grey;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.iapp-detail-inner-wrap {
+    background-color: white;
+    border-radius: 5px;
+    @include BoxShadowHelper(4);
+    margin: 1em auto 4em auto;
+    max-width: 600px;
+    padding: 2em;
+    position: relative;
+    width: 100%;
+    z-index: 100;
+}
+
+.iapp-detail-close-button {
+    cursor: pointer;
+    right: 10px;
+    position: absolute;
+    top: 10px;
+    width: 20px;
+}
+
+.iapp-detail-head {
+    font-family: "Futura Today DemiBold", Arial, sans-serif;
+    font-size: 1.8em;
+}
+
+.iapp-detail-sub-head {
+    font-family: "Futura Today Light", Arial, sans-serif;
+    margin-bottom: 1em;
+}
+
+.iapp-detail-background {
+    background-color: transparentize($pale-grey-red, .1);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99;
+}
+
+.iapp-detail-data-label {
+    font-size: 1.2em;
+    font-family: "Futura Today DemiBold", Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.iapp-detail-data-text.label {
+    background-color: #fc6621;
+    font-size: 1.2em;
+}
+
+.iapp-detail-group {
+    padding-bottom: 1em;
+    padding-top: 1em;
+    margin-bottom: 1em;
+}
+
+.iapp-detail-info {
+    font-family: "Futura Today Light", Arial, sans-serif;
+    font-size: 1em;
+}
+
+/******
+Detail Share
+******/
+
+.iapp-detail-share-wrap {
+    bottom: 10px;
+    position: relative;
+    z-index: 105;
+}
+
+.iapp-detail-share-button {
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 1px white;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    display: none;
+    font-family: "Futura Today Light", Arial, sans-serif;
+    opacity: 0.6;
+    padding: 10px;
+    text-transform: uppercase;
+    transition: all 500ms ease;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+        opacity: 1;
+    }
+}
+
+.iapp-embed .iapp-detail-share-button, .iapp-embed .iapp-share-icon {
+    display: none;
+}
+
+
+.iapp-share-icon-wrap {
+    // bottom: 50px;
+    // opacity: 0;
+    // position: absolute;
+    left: 10px;
+    width: 100px;
+    transition: all 250ms ease;
+    z-index: 500;
+    &.iapp-show {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+.iapp-share-icon {
+    display: inline-block;
+    // transform: translate(0, 300%);
+    width: 40px;
+    &:nth-child(0n+1) {
+        transition: all 250ms ease;
+    }
+    &:nth-child(0n+2) {
+        transition: all 250ms ease 100ms;
+    }
+}
+
+
+.iapp-show {
+    .iapp-share-icon {
+        // transform: translate(0, 0);
+    }
+}
+
+/******
+County Table
+******/
+
+.iapp-detail-container {
+
+    td {
+        font-family: "Futura Today Normal", Arial, sans-serif;
+    }
+
+    td.table-number {
+        text-align: center;
+    }
+
+    th {
+        font-family: "Futura Today DemiBold", Arial, sans-serif;
+        font-weight: 400;
+    }
+
+}
+
+/******
+Detail Chart
+******/
+
+.iapp-detail-chart {
+}
+
+.iapp-detail-key {
+    display: flex;
+    flex-direction: row;
+    font-family: "Futura Today DemiBold", Arial, sans-serif;
+    font-weight: 400;
+    justify-content: space-between;
+    margin-bottom: 2em;
+
+    @extend .group;
+}
+
+.iapp-detail-key-item {
+    // diplay: inline-block;
+    // float: left;
+    // margin-right: 10px;
+    text-align: center;
+    white-space: nowrap;
+
+    @media (max-width: 600px) {
+        font-size: 12px;
+    }
+}
+
+.iapp-detail-key-color {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+
+    &.police { background-color: #2e76ff}
+    &.driver { background-color: #d00028}
+    &.non-violator { background-color: #a6db5e}
+}
+
+.iapp-detail-key-text {
+}
