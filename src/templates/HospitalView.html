@@ -2,7 +2,7 @@
     <h2 class="iapp-detail-head"><%=facility%></h2>
     <div class="iapp-detail-group">
             <span class="iapp-detail-data-label">Total Vacancies: </span>
-            <span class="iapp-detail-data-text label label-primary"><%= print(overall_jobs - (overall_jobs * (overall_percent_vacant/100) )) %></span>
+            <span class="iapp-detail-data-text label label-primary"><% print(overall_jobs - (overall_jobs * (overall_percent_vacant/100) )) %></span>
         </div>
     <h3 class="iapp-detail-sub-head">Hospital Overview</h3>
     <div class="iapp-detail-chart"></div>
@@ -17,7 +17,7 @@
             <span class="iapp-detail-key-color driver"></span>
             <span class="iapp-detail-key-text">Filled Positions:</span>
             <br/>
-            <span class="iapp-detail-key-item-number"><%= print(100 - overall_percent_vacant) %></span>
+            <span class="iapp-detail-key-item-number"><% print(100 - overall_percent_vacant) %></span>
         </div>
     </div>
     <h3 class="iapp-detail-sub-head">Hospital Breakdown</h3>
@@ -34,22 +34,21 @@
             </tr>
         </thead>
         <tbody>
-        <% _.each(top_10, function(county) { %>
             <tr>
-                <td><%= facility.facility %></td>
-                <td class="table-number"><%= facility.city %></td>
-                <td class="table-number"><%= facility.state %></td>
-                <td class="table-number"><%= facility.overall_percent_vacant %></td>
-                <td class="table-number"><%= facility.scheduler_clinic_workflow %></td>
-                <td class="table-number"><%= facility.nurse %></td>
-                <td class="table-number"><%= facility.physical_therapist %></td>
-                <td class="table-number"><%= facility.physician %></td>
-                <td class="table-number"><%= facility.physician_assistant %></td>
-                <td class="table-number"><%= facility.psychology %></td>
+                <td><%= facility %></td>
+                <td class="table-number"><%= city %></td>
+                <td class="table-number"><%= state %></td>
+                <td class="table-number"><%= overall_percent_vacant %></td>
+                <td class="table-number"><%= scheduler_clinic_workflow %></td>
+                <td class="table-number"><%= nurse %></td>
+                <td class="table-number"><%= physical_therapist %></td>
+                <td class="table-number"><%= physician %></td>
+                <td class="table-number"><%= physician_assistant %></td>
+                <td class="table-number"><%= psychology %></td>
 
          
             </tr>
-        <% }); %>
+       
         </tbody>
     </table>
 </div>
