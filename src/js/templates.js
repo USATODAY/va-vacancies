@@ -17,7 +17,7 @@ obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
 __p += '<h2 class="iapp-search-entry-title">' +
-((__t = ( full_state )) == null ? '' : __t) +
+((__t = ( facility )) == null ? '' : __t) +
 '</h2>\n';
 
 }
@@ -30,26 +30,36 @@ var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 with (obj) {
 __p += '<div class="iapp-detail-inner-wrap">\n    <h2 class="iapp-detail-head">' +
-((__t = (full_state)) == null ? '' : __t) +
+((__t = (facility)) == null ? '' : __t) +
 '</h2>\n    <div class="iapp-detail-group">\n            <span class="iapp-detail-data-label">Total Vacancies: </span>\n            <span class="iapp-detail-data-text label label-primary">' +
-((__t = ( total_pretty )) == null ? '' : __t) +
+((__t = ( print(overall_jobs - (overall_jobs * (overall_percent_vacant/100) )) )) == null ? '' : __t) +
 '</span>\n        </div>\n    <h3 class="iapp-detail-sub-head">Hospital Overview</h3>\n    <div class="iapp-detail-chart"></div>\n    <div class="iapp-detail-key">\n        <div class="iapp-detail-key-item">\n            <span class="iapp-detail-key-color police"></span>\n            <span class="iapp-detail-key-text">Vacant Positions: </span>\n            <br/>\n            <span class="iapp-detail-key-item-number">' +
-((__t = (police)) == null ? '' : __t) +
+((__t = (overall_percent_vacant)) == null ? '' : __t) +
 '</span>\n        </div>\n        <div class="iapp-detail-key-item">\n            <span class="iapp-detail-key-color driver"></span>\n            <span class="iapp-detail-key-text">Filled Positions:</span>\n            <br/>\n            <span class="iapp-detail-key-item-number">' +
-((__t = (fleeing_driver)) == null ? '' : __t) +
+((__t = ( print(100 - overall_percent_vacant) )) == null ? '' : __t) +
 '</span>\n        </div>\n    </div>\n    <h3 class="iapp-detail-sub-head">Hospital Breakdown</h3>\n    <table class="table table-condensed">\n        <thead>\n            <tr>\n                <th>Overall Vacancy</th>\n                <th>Scheduler</th>\n                <th>Nurse</th>\n                <th>Physical Therapist</th>\n                <th>Physician</th>\n                <th>Physician Assistant</th>\n                <th>Psychology</th>\n            </tr>\n        </thead>\n        <tbody>\n        ';
  _.each(top_10, function(county) { ;
 __p += '\n            <tr>\n                <td>' +
-((__t = ( county.county )) == null ? '' : __t) +
+((__t = ( facility.facility )) == null ? '' : __t) +
 '</td>\n                <td class="table-number">' +
-((__t = ( county.total_dead )) == null ? '' : __t) +
+((__t = ( facility.city )) == null ? '' : __t) +
 '</td>\n                <td class="table-number">' +
-((__t = ( county.police )) == null ? '' : __t) +
+((__t = ( facility.state )) == null ? '' : __t) +
 '</td>\n                <td class="table-number">' +
-((__t = ( county.fleeing_driver )) == null ? '' : __t) +
-'</td>\n                <td class="table-number">';
- print(county.bystanders + county.fleeing_other) ;
-__p += '</td>\n            </tr>\n        ';
+((__t = ( facility.overall_percent_vacant )) == null ? '' : __t) +
+'</td>\n                <td class="table-number">' +
+((__t = ( facility.scheduler_clinic_workflow )) == null ? '' : __t) +
+'</td>\n                <td class="table-number">' +
+((__t = ( facility.nurse )) == null ? '' : __t) +
+'</td>\n                <td class="table-number">' +
+((__t = ( facility.physical_therapist )) == null ? '' : __t) +
+'</td>\n                <td class="table-number">' +
+((__t = ( facility.physician )) == null ? '' : __t) +
+'</td>\n                <td class="table-number">' +
+((__t = ( facility.physician_assistant )) == null ? '' : __t) +
+'</td>\n                <td class="table-number">' +
+((__t = ( facility.psychology )) == null ? '' : __t) +
+'</td>\n\n         \n            </tr>\n        ';
  }); ;
 __p += '\n        </tbody>\n    </table>\n</div>\n<div class="iapp-detail-share-wrap">\n    <span class="iapp-detail-share-button">Share</span>\n    <div class="iapp-share-icon-wrap">\n        <a href="https://twitter.com/intent/tweet?url=' +
 ((__t = (twitterShare)) == null ? '' : __t) +
@@ -116,7 +126,7 @@ var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 with (obj) {
 __p += '<div class="iapp-detail-inner-wrap">\n    <h2 class="iapp-detail-head">' +
-((__t = (full_state)) == null ? '' : __t) +
+((__t = ( facility )) == null ? '' : __t) +
 '</h2>\n    <div class="iapp-detail-group">\n            <span class="iapp-detail-data-label">Total Vacancies: </span>\n            <span class="iapp-detail-data-text label label-primary">' +
 ((__t = ( total_vacant_jobs )) == null ? '' : __t) +
 '</span>\n        </div>\n    <h3 class="iapp-detail-sub-head">National Overview</h3>\n    <div class="iapp-detail-chart"></div>\n    <div class="iapp-detail-key">\n        <div class="iapp-detail-key-item">\n            <span class="iapp-detail-key-color police"></span>\n            <span class="iapp-detail-key-text">Vacant Positions: </span>\n            <br/>\n            <span class="iapp-detail-key-item-number">' +
