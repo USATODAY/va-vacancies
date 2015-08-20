@@ -24,17 +24,20 @@ define([
         },
         render: function() {
             this.$el.html(this.template({isMobile: config.isMobile || config.isTablet}));
-            var videoView = new VideoView();
+            // var videoView = new VideoView();
             var nationalData = _.findWhere(this.rawData, {"facility": "National"});
             var usModel = new EntryModel(nationalData);
 
-            if (config.isMobile || config.isTablet) {
-                this.$('.iapp-mobile-video-container').html(videoView.render().el);
-            } else {
-                this.$el.append(videoView.render().el);
-            }
+            // if (config.isMobile || config.isTablet) {
+                // this.$('.iapp-mobile-video-container').html(videoView.render().el);
+            // } else {
+                // this.$el.append(videoView.render().el);
+            // }
             this.detailView = new DetailView({model: usModel});
             this.$('.iapp-detail-container').html(this.detailView.el);
+
+            //temporary fix when removing video view
+            this.skipVideo();
             this.resultsView = new ResultsView({el: this.$(".iapp-search-results-wrap")});
             Backbone.history.start();
             return this;
