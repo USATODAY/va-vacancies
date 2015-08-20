@@ -4,7 +4,7 @@ define([
     //set project data URL here
     var dataURL = "http://www.gannett-cdn.com/experiments/usatoday/2015/08/va-vacancies/data/data.json";
     //set project image path here
-    var imagePath = "http://www.gannett-cdn.com/experiments/usatoday/2015/07/police-chases/img/";
+    var imagePath = "http://www.gannett-cdn.com/experiments/usatoday/2015/08/va-vacancies/img/fb-post.jpg";
 
     //set project default share language here
     var defaultShareLanguage = "At some VA hospitals, as many as one-third of all medical jobs are vacant. Check your local VA health care system.";

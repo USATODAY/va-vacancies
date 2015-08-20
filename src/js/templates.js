@@ -41,35 +41,35 @@ __p += '%</span><span> of pending appointments not fulfilled within 30 days of t
 ((__t = (positions_vacant)) == null ? '' : __t) +
 '</span>\n        </div>\n        <div class="iapp-detail-key-item">\n            <span class="iapp-detail-key-color driver"></span>\n            <span class="iapp-detail-key-text">Filled Positions:</span>\n            <br/>\n            <span class="iapp-detail-key-item-number">';
  print(overall_jobs - (Math.round(positions_vacant*10)/10));
-__p += '</span>\n        </div>\n    </div>\n    <h3 class="iapp-detail-sub-head">Region Breakdown</h3>\n       <table class="table table-condensed">\n            <tr>\n                <th>Overall Vacancy</th>\n                <td class="table-number">';
+__p += '</span>\n        </div>\n    </div>\n    <h3 class="iapp-detail-sub-head">Region Breakdown</h3>\n       <table class="table table-condensed">\n            <thead>\n                  <tr>\n                    <th></th>\n                    <th class="table-number">Region</td>\n                    <th class="table-number">National</td>\n                </tr>\n            </thead>\n            <tbody>\n                <tr>\n                    <th>Overall Vacancy</th>\n                    <td class="table-number">';
 print(Math.round(overall_percent_vacant*10)/10);
-__p += '%</td>\n                <td class="table-number">';
+__p += '%</td>\n                    <td class="table-number">';
 print(Math.round(national_overall*10)/10);
-__p += '%</td>\n            </tr>\n            <tr>\n                <th>Schedulers / Workflow Assistants</th>\n                <td class="table-number">';
+__p += '%</td>\n                </tr>\n                <tr>\n                    <th>Schedulers / Workflow Assistants</th>\n                    <td class="table-number">';
 print(Math.round(scheduler_clinic_workflow*10)/10);
-__p += '%</td>\n                <td class="table-number">';
+__p += '%</td>\n                    <td class="table-number">';
 print(Math.round(national_scheduler_clinic_workflow*10)/10);
-__p += '%</td>\n            </tr>\n            <tr>\n                <th>Nurses</th>\n                <td class="table-number">';
+__p += '%</td>\n                </tr>\n                <tr>\n                    <th>Nurses</th>\n                    <td class="table-number">';
 print(Math.round(nurse*10)/10);
-__p += '%</td>\n                <td class="table-number">';
+__p += '%</td>\n                    <td class="table-number">';
 print(Math.round(national_nurse*10)/10);
-__p += '%</td>\n            </tr>\n            <tr>\n                <th>Physical Therapists</th>\n                <td class="table-number">';
+__p += '%</td>\n                </tr>\n                <tr>\n                    <th>Physical Therapists</th>\n                    <td class="table-number">';
 print(Math.round(physical_therapist*10)/10);
-__p += '%</td>\n                <td class="table-number">';
+__p += '%</td>\n                    <td class="table-number">';
 print(Math.round(national_physical_therapist*10)/10);
-__p += '%</td>\n            </tr>\n            <tr>\n                <th>Physicians</th>\n                <td class="table-number">';
+__p += '%</td>\n                </tr>\n                <tr>\n                    <th>Physicians</th>\n                    <td class="table-number">';
 print(Math.round(physician*10)/10);
-__p += '%</td>\n                <td class="table-number">';
+__p += '%</td>\n                    <td class="table-number">';
 print(Math.round(national_physician*10)/10);
-__p += '%</td>\n            </tr>\n            <tr>\n                <th>Physician Assistants</th>\n                <td class="table-number">';
+__p += '%</td>\n                </tr>\n                <tr>\n                    <th>Physician Assistants</th>\n                    <td class="table-number">';
 print(Math.round(physician_assistant*10)/10);
-__p += '%</td>\n                <td class="table-number">';
+__p += '%</td>\n                    <td class="table-number">';
 print(Math.round(national_physician_assistant*10)/10);
-__p += '%</td>\n            </tr>\n            <tr>\n                <th>Psychologists</th>\n                <td class="table-number">';
+__p += '%</td>\n                </tr>\n                <tr>\n                    <th>Psychologists</th>\n                    <td class="table-number">';
 print(Math.round(psychology*10)/10);
-__p += '%</td>\n                <td class="table-number">';
+__p += '%</td>\n                    <td class="table-number">';
 print(Math.round(national_psychology*10)/10);
-__p += '%</td>\n            </tr>\n        </table>\n        <h4 class="iapp-detail-info">Source: Veterans Affairs Administration</h4>\n</div>\n<div class="iapp-detail-share-wrap">\n    <span class="iapp-detail-share-button">Share</span>\n    <div class="iapp-share-icon-wrap">\n        <a href="https://twitter.com/intent/tweet?url=' +
+__p += '%</td>\n                </tr>\n            </tbody>\n        </table>\n        <h4 class="iapp-detail-info">Source: Veterans Affairs Administration</h4>\n</div>\n<div class="iapp-detail-share-wrap">\n    <span class="iapp-detail-share-button">Share</span>\n    <div class="iapp-share-icon-wrap">\n        <a href="https://twitter.com/intent/tweet?url=' +
 ((__t = (twitterShare)) == null ? '' : __t) +
 '&text=' +
 ((__t = (encodedShare)) == null ? '' : __t) +
