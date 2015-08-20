@@ -7,7 +7,7 @@ define([
     var imagePath = "http://www.gannett-cdn.com/experiments/usatoday/2015/07/police-chases/img/";
 
     //set project default share language here
-    var defaultShareLanguage = "Check how many jobs are vacant at your local VA.";
+    var defaultShareLanguage = "At some VA hospitals, as many as one-third of all medical jobs are vacant. Check your local VA health care system.";
     var defaultShareImage = imagePath + "fb-post.jpg";
 
     var isMobile, fb_app_id;
