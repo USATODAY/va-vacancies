@@ -6,7 +6,7 @@ this["templates"]["AppView.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div class="iapp-search-wrap iapp-fade">\n    <div class="iapp-search ">\n        <div class="iapp-header">Police chases kill thousands</div>\n                <p class="iapp-chatter">Critics say the Veterans Health Administration, which has come under fire for leaving patients waiting to receive medical treatment, has a hiring problem. Data obtained from the VHA show the agency had more than 40,000 full- and part-time medical jobs unfilled as of July 15. At some VHA locations, more than half of many critical jobs are open.</p>\n        <div class="iapp-search-input-group">\n            <img class="iapp-search-icon" src="http://www.gannett-cdn.com/experiments/usatoday/2015/07/rape-kits/img/search-icon.svg" alt="Info">\n            <input class="iapp-search-input" type="text" placeholder="Search states">\n        </div>\n        <div class="iapp-search-results-wrap" style="display: none">\n            <div class="iapp-search-results-inner-wrap"></div>\n        </div>\n        <div class="iapp-detail-container"></div>\n    </div>\n    <div class="iapp-info-button" style="display: none">\n        <img src="http://www.gannett-cdn.com/experiments/usatoday/2015/07/rape-kits/img/question-icon.svg" alt="Info">\n    </div>\n    <div class="iapp-play-button">\n        <img src="http://www.gannett-cdn.com/experiments/usatoday/2015/07/rape-kits/img/play-icon-white.svg" alt="Play video"> <span>Play Video</span>\n    </div>\n</div>\n\n<div class="iapp-info-wrap">\n    <div class="iapp-info-close"><img src="http://www.gannett-cdn.com/experiments/usatoday/2015/07/rape-kits/img/close-icon-white.svg" alt="close"></div>\n    <div class="iapp-info-inner-wrap">\n        <h3 class="iapp-info-header">Credits</h3>\n        <p class="iapp-info-p">Tom Frank, John Kelly, Shawn Sullivan, Mitchell Thorson, Zachary Walker, USA TODAY</p>\n    </div>\n    <div class="iapp-detail-background js-iapp-info-background"></div>\n</div>\n<div class="iapp-mobile-video-container"></div>\n';
+__p += '<div class="iapp-search-wrap iapp-fade">\n    <div class="iapp-search ">\n        <div class="iapp-header">VA HEAD HERE</div>\n                <p class="iapp-chatter">Critics say the Veterans Health Administration, which has come under fire for leaving patients waiting to receive medical treatment, has a hiring problem. Data obtained from the VHA show the agency had more than 40,000 full- and part-time medical jobs unfilled as of July 15. At some VHA locations, more than half of many critical jobs are open.</p>\n        <div class="iapp-search-input-group">\n            <img class="iapp-search-icon" src="http://www.gannett-cdn.com/experiments/usatoday/2015/07/rape-kits/img/search-icon.svg" alt="Info">\n            <input class="iapp-search-input" type="text" placeholder="Search states">\n        </div>\n        <div class="iapp-search-results-wrap" style="display: none">\n            <div class="iapp-search-results-inner-wrap"></div>\n        </div>\n        <div class="iapp-detail-container"></div>\n    </div>\n    <div class="iapp-info-button">\n        <img src="http://www.gannett-cdn.com/experiments/usatoday/2015/07/rape-kits/img/question-icon.svg" alt="Info">\n    </div>\n</div>\n\n<div class="iapp-info-wrap">\n    <div class="iapp-info-close"><img src="http://www.gannett-cdn.com/experiments/usatoday/2015/07/rape-kits/img/close-icon-white.svg" alt="close"></div>\n    <div class="iapp-info-inner-wrap">\n        <h3 class="iapp-info-header">Credits</h3>\n        <p class="iapp-info-p">Meghan Hoyer, Jodi Upton, Mitchell Thorson, Shawn SUllivan, USA TODAY</p>\n    </div>\n    <div class="iapp-detail-background js-iapp-info-background"></div>\n</div>\n<div class="iapp-mobile-video-container"></div>\n';
 
 }
 return __p
@@ -31,33 +31,31 @@ function print() { __p += __j.call(arguments, '') }
 with (obj) {
 __p += '<div class="iapp-detail-inner-wrap">\n    <h2 class="iapp-detail-head">' +
 ((__t = (facility)) == null ? '' : __t) +
-'</h2>\n    <div class="iapp-detail-group">\n            <span class="iapp-detail-data-label">Total Vacancies: </span>\n            <span class="iapp-detail-data-text label label-primary">';
- print(overall_jobs - (overall_jobs * (overall_percent_vacant/100) )) ;
-__p += '</span>\n        </div>\n    <h3 class="iapp-detail-sub-head">Hospital Overview</h3>\n    <div class="iapp-detail-chart"></div>\n    <div class="iapp-detail-key">\n        <div class="iapp-detail-key-item">\n            <span class="iapp-detail-key-color police"></span>\n            <span class="iapp-detail-key-text">Vacant Positions: </span>\n            <br/>\n            <span class="iapp-detail-key-item-number">' +
-((__t = (overall_percent_vacant)) == null ? '' : __t) +
-'</span>\n        </div>\n        <div class="iapp-detail-key-item">\n            <span class="iapp-detail-key-color driver"></span>\n            <span class="iapp-detail-key-text">Filled Positions:</span>\n            <br/>\n            <span class="iapp-detail-key-item-number">';
- print(100 - overall_percent_vacant) ;
-__p += '</span>\n        </div>\n    </div>\n    <h3 class="iapp-detail-sub-head">Hospital Breakdown</h3>\n    <table class="table table-condensed">\n        <thead>\n            <tr>\n                <th>Overall Vacancy</th>\n                <th>Scheduler</th>\n                <th>Nurse</th>\n                <th>Physical Therapist</th>\n                <th>Physician</th>\n                <th>Physician Assistant</th>\n                <th>Psychology</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr>\n                <td>' +
-((__t = ( facility )) == null ? '' : __t) +
-'</td>\n                <td class="table-number">' +
-((__t = ( city )) == null ? '' : __t) +
-'</td>\n                <td class="table-number">' +
-((__t = ( state )) == null ? '' : __t) +
-'</td>\n                <td class="table-number">' +
-((__t = ( overall_percent_vacant )) == null ? '' : __t) +
-'</td>\n                <td class="table-number">' +
-((__t = ( scheduler_clinic_workflow )) == null ? '' : __t) +
-'</td>\n                <td class="table-number">' +
-((__t = ( nurse )) == null ? '' : __t) +
-'</td>\n                <td class="table-number">' +
-((__t = ( physical_therapist )) == null ? '' : __t) +
-'</td>\n                <td class="table-number">' +
-((__t = ( physician )) == null ? '' : __t) +
-'</td>\n                <td class="table-number">' +
-((__t = ( physician_assistant )) == null ? '' : __t) +
-'</td>\n                <td class="table-number">' +
-((__t = ( psychology )) == null ? '' : __t) +
-'</td>\n\n         \n            </tr>\n       \n        </tbody>\n    </table>\n</div>\n<div class="iapp-detail-share-wrap">\n    <span class="iapp-detail-share-button">Share</span>\n    <div class="iapp-share-icon-wrap">\n        <a href="https://twitter.com/intent/tweet?url=' +
+'</h2>\n    <p><td class="table-number">' +
+((__t = (city)) == null ? '' : __t) +
+', ' +
+((__t = (state)) == null ? '' : __t) +
+' </td></p>\n    <div class="iapp-detail-group">\n            <span class="iapp-detail-data-label"> </span>\n            <span class="iapp-detail-data-text label label-primary">' +
+((__t = ( pct_appts_over_30_day )) == null ? '' : __t) +
+'%</span><span> of pending appointments not fulfilled within 30 days of the patient’s desired date.</span>\n            \n        </div>\n    <h3 class="iapp-detail-sub-head">Region Overview</h3>\n    <div class="iapp-detail-chart"></div>\n    <div class="iapp-detail-key">\n        <div class="iapp-detail-key-item">\n            <span class="iapp-detail-key-color police"></span>\n            <span class="iapp-detail-key-text">Vacant Positions: </span>\n            <br/>\n            <span class="iapp-detail-key-item-number">' +
+((__t = (positions_vacant)) == null ? '' : __t) +
+'</span>\n        </div>\n        <div class="iapp-detail-key-item">\n            <span class="iapp-detail-key-color driver"></span>\n            <span class="iapp-detail-key-text">Filled Positions:</span>\n            <br/>\n            <span class="iapp-detail-key-item-number">' +
+((__t = ( overall_jobs)) == null ? '' : __t) +
+'</span>\n        </div>\n    </div>\n    <h3 class="iapp-detail-sub-head">Region Breakdown</h3>\n       <table class="table table-condensed">\n            <tr>\n                <th>Overall Vacancy</th>\n                <td class="table-number">';
+print(Math.round(overall_percent_vacant*10)/10);
+__p += '%</td>\n            </tr>\n            <tr>\n                <th>Schedulers / Workflow Assistants</th>\n                <td class="table-number">';
+print(Math.round(scheduler_clinic_workflow*10)/10);
+__p += '%</td>\n            </tr>\n            <tr>\n                <th>Nurses</th>\n                <td class="table-number">';
+print(Math.round(nurse*10)/10);
+__p += '%</td>\n            </tr>\n            <tr>\n                <th>Physical Therapists</th>\n                <td class="table-number">';
+print(Math.round(physical_therapist*10)/10);
+__p += '%</td>\n            </tr>\n            <tr>\n                <th>Physicians</th>\n                <td class="table-number">';
+print(Math.round(physician*10)/10);
+__p += '%</td>\n            </tr>\n            <tr>\n                <th>Physician Assistants</th>\n                <td class="table-number">';
+print(Math.round(physician_assistant*10)/10);
+__p += '%</td>\n            </tr>\n            <tr>\n                <th>Psychologists</th>\n                <td class="table-number">';
+print(Math.round(psychology*10)/10);
+__p += '%</td>\n            </tr>\n        </table>\n</div>\n<div class="iapp-detail-share-wrap">\n    <span class="iapp-detail-share-button">Share</span>\n    <div class="iapp-share-icon-wrap">\n        <a href="https://twitter.com/intent/tweet?url=' +
 ((__t = (twitterShare)) == null ? '' : __t) +
 '&text=' +
 ((__t = (encodedShare)) == null ? '' : __t) +
@@ -127,7 +125,7 @@ __p += '<div class="iapp-detail-inner-wrap">\n    <h2 class="iapp-detail-head">V
 ((__t = (overall_percent_vacant)) == null ? '' : __t) +
 '</span>\n        </div>\n        <div class="iapp-detail-key-item">\n            <span class="iapp-detail-key-color driver"></span>\n            <span class="iapp-detail-key-text">Filled Positions:</span>\n            <br/>\n            <span class="iapp-detail-key-item-number">';
  print(100 - overall_percent_vacant);
-__p += '</span>\n        </div>\n\n        <!-- I removed one of the key items here -->\n    </div>\n    <h3 class="iapp-detail-sub-head">Systems with largest vacancies</h3>\n    <table class="table table-condensed">\n        <thead>\n            <tr>\n                <th>Health Care System</th>\n                <th>Location</th>\n                <th>Overall vacancy</th>\n                <th>Critical Need</th>\n                <th>Critical Vacancy</th>\n            </tr>\n        </thead>\n        <tbody>\n        ';
+__p += '</span>\n        </div>\n\n        <!-- I removed one of the key items here -->\n    </div>\n    <h3 class="iapp-detail-sub-head">Systems with largest vacancies</h3>\n    <table class="table table-condensed">\n        <thead>\n            <tr>\n                <th>Health Care System</th>\n                <th>Location</th>\n                <th>Overall Vacancy</th>\n                <th>Critical Need</th>\n                <th>Critical Vacancy</th>\n            </tr>\n        </thead>\n        <tbody>\n        ';
  _.each(top_10, function(facility) { ;
 __p += '\n            <tr>\n                <td>' +
 ((__t = ( facility.facility )) == null ? '' : __t) +
@@ -135,13 +133,13 @@ __p += '\n            <tr>\n                <td>' +
 ((__t = ( facility.city )) == null ? '' : __t) +
 ', ' +
 ((__t = ( facility.state )) == null ? '' : __t) +
-' </td>\n                <td class="table-number">' +
-((__t = ( facility.overall_percent_vacant )) == null ? '' : __t) +
-'</td>\n                <td class="table-number">' +
+' </td>\n                <td class="table-number">';
+print(Math.round(overall_percent_vacant*10)/10);
+__p += '%</td>\n                <td class="table-number">' +
 ((__t = ( facility.critical_job )) == null ? '' : __t) +
-'</td>\n                <td class="table-number">' +
-((__t = ( facility.critical_vacancy_rate )) == null ? '' : __t) +
-'</td>\n            </tr>\n        ';
+'</td>\n                <td class="table-number">';
+print(Math.round(facility.critical_vacancy_rate*10)/10);
+__p += '%</td>\n            </tr>\n        ';
  }); ;
 __p += '\n        </tbody>\n    </table>\n</div>\n<div class="iapp-detail-share-wrap">\n    <span class="iapp-detail-share-button">Share</span>\n    <div class="iapp-share-icon-wrap">\n        <a href="https://twitter.com/intent/tweet?url=' +
 ((__t = (twitterShare)) == null ? '' : __t) +

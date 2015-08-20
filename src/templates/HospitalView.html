@@ -1,56 +1,58 @@
 <div class="iapp-detail-inner-wrap">
     <h2 class="iapp-detail-head"><%=facility%></h2>
+    <p><td class="table-number"><%=city%>, <%=state%> </td></p>
     <div class="iapp-detail-group">
-            <span class="iapp-detail-data-label">Total Vacancies: </span>
-            <span class="iapp-detail-data-text label label-primary"><% print(overall_jobs - (overall_jobs * (overall_percent_vacant/100) )) %></span>
+            <span class="iapp-detail-data-label"> </span>
+            <span class="iapp-detail-data-text label label-primary"><%= pct_appts_over_30_day %>%</span><span> of pending appointments not fulfilled within 30 days of the patient’s desired date.</span>
+            
         </div>
-    <h3 class="iapp-detail-sub-head">Hospital Overview</h3>
+    <h3 class="iapp-detail-sub-head">Region Overview</h3>
     <div class="iapp-detail-chart"></div>
     <div class="iapp-detail-key">
         <div class="iapp-detail-key-item">
             <span class="iapp-detail-key-color police"></span>
             <span class="iapp-detail-key-text">Vacant Positions: </span>
             <br/>
-            <span class="iapp-detail-key-item-number"><%=overall_percent_vacant%></span>
+            <span class="iapp-detail-key-item-number"><%=positions_vacant%></span>
         </div>
         <div class="iapp-detail-key-item">
             <span class="iapp-detail-key-color driver"></span>
             <span class="iapp-detail-key-text">Filled Positions:</span>
             <br/>
-            <span class="iapp-detail-key-item-number"><% print(100 - overall_percent_vacant) %></span>
+            <span class="iapp-detail-key-item-number"><%= overall_jobs%></span>
         </div>
     </div>
-    <h3 class="iapp-detail-sub-head">Hospital Breakdown</h3>
-    <table class="table table-condensed">
-        <thead>
+    <h3 class="iapp-detail-sub-head">Region Breakdown</h3>
+       <table class="table table-condensed">
             <tr>
                 <th>Overall Vacancy</th>
-                <th>Scheduler</th>
-                <th>Nurse</th>
-                <th>Physical Therapist</th>
-                <th>Physician</th>
-                <th>Physician Assistant</th>
-                <th>Psychology</th>
+                <td class="table-number"><%print(Math.round(overall_percent_vacant*10)/10)%>%</td>
             </tr>
-        </thead>
-        <tbody>
             <tr>
-                <td><%= facility %></td>
-                <td class="table-number"><%= city %></td>
-                <td class="table-number"><%= state %></td>
-                <td class="table-number"><%= overall_percent_vacant %></td>
-                <td class="table-number"><%= scheduler_clinic_workflow %></td>
-                <td class="table-number"><%= nurse %></td>
-                <td class="table-number"><%= physical_therapist %></td>
-                <td class="table-number"><%= physician %></td>
-                <td class="table-number"><%= physician_assistant %></td>
-                <td class="table-number"><%= psychology %></td>
-
-         
+                <th>Schedulers / Workflow Assistants</th>
+                <td class="table-number"><%print(Math.round(scheduler_clinic_workflow*10)/10)%>%</td>
             </tr>
-       
-        </tbody>
-    </table>
+            <tr>
+                <th>Nurses</th>
+                <td class="table-number"><%print(Math.round(nurse*10)/10)%>%</td>
+            </tr>
+            <tr>
+                <th>Physical Therapists</th>
+                <td class="table-number"><%print(Math.round(physical_therapist*10)/10)%>%</td>
+            </tr>
+            <tr>
+                <th>Physicians</th>
+                <td class="table-number"><%print(Math.round(physician*10)/10)%>%</td>
+            </tr>
+            <tr>
+                <th>Physician Assistants</th>
+                <td class="table-number"><%print(Math.round(physician_assistant*10)/10)%>%</td>
+            </tr>
+            <tr>
+                <th>Psychologists</th>
+                <td class="table-number"><%print(Math.round(psychology*10)/10)%>%</td>
+            </tr>
+        </table>
 </div>
 <div class="iapp-detail-share-wrap">
     <span class="iapp-detail-share-button">Share</span>
