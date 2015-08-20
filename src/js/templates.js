@@ -119,13 +119,13 @@ obj || (obj = {});
 var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 with (obj) {
-__p += '<div class="iapp-detail-inner-wrap">\n    <h2 class="iapp-detail-head">Veterans Health Administration</h2>\n    <div class="iapp-detail-group">\n            <span class="iapp-detail-data-label">Total Medical Vacancies: </span>\n            <span class="iapp-detail-data-text label label-primary">' +
-((__t = ( total_vacant_jobs )) == null ? '' : __t) +
+__p += '<div class="iapp-detail-inner-wrap">\n    <h2 class="iapp-detail-head">Veterans Health Administration</h2>\n    <div class="iapp-detail-group">\n            <span class="iapp-detail-data-label">Overall Medical Vacancies: </span>\n            <span class="iapp-detail-data-text label label-primary">' +
+((__t = ( overall_percent_vacant )) == null ? '' : __t) +
 '</span>\n        </div>\n    <h3 class="iapp-detail-sub-head">National Overview</h3>\n    <div class="iapp-detail-chart"></div>\n    <div class="iapp-detail-key">\n        <div class="iapp-detail-key-item">\n            <span class="iapp-detail-key-color police"></span>\n            <span class="iapp-detail-key-text">Vacant Positions: </span>\n            <br/>\n            <span class="iapp-detail-key-item-number">' +
-((__t = (overall_percent_vacant)) == null ? '' : __t) +
-'%</span>\n        </div>\n        <div class="iapp-detail-key-item">\n            <span class="iapp-detail-key-color driver"></span>\n            <span class="iapp-detail-key-text">Filled Positions:</span>\n            <br/>\n            <span class="iapp-detail-key-item-number">';
- print(100 - overall_percent_vacant);
-__p += '%</span>\n        </div>\n\n        <!-- I removed one of the key items here -->\n    </div>\n    <h3 class="iapp-detail-sub-head">Systems with largest vacancies</h3>\n    <table class="table table-condensed">\n        <thead>\n            <tr>\n                <th>Health Care System</th>\n                <th>Location</th>\n                <th>Overall Vacancy</th>\n                <th>Critical Need</th>\n                <th>Critical Vacancy</th>\n            </tr>\n        </thead>\n        <tbody>\n        ';
+((__t = (total_vacant_jobs)) == null ? '' : __t) +
+'</span>\n        </div>\n        <div class="iapp-detail-key-item">\n            <span class="iapp-detail-key-color driver"></span>\n            <span class="iapp-detail-key-text">Filled Positions:</span>\n            <br/>\n            <span class="iapp-detail-key-item-number">';
+ print(overall_jobs - total_vacant_jobs);
+__p += '</span>\n        </div>\n\n        <!-- I removed one of the key items here -->\n    </div>\n    <h3 class="iapp-detail-sub-head">Systems with largest vacancies</h3>\n    <table class="table table-condensed">\n        <thead>\n            <tr>\n                <th>Health Care System</th>\n                <th>Location</th>\n                <th>Overall Vacancy</th>\n                <th>Critical Need</th>\n                <th>Critical Vacancy</th>\n            </tr>\n        </thead>\n        <tbody>\n        ';
  _.each(top_10, function(facility) { ;
 __p += '\n            <tr>\n                <td>' +
 ((__t = ( facility.facility )) == null ? '' : __t) +

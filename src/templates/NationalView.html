@@ -1,8 +1,8 @@
 <div class="iapp-detail-inner-wrap">
     <h2 class="iapp-detail-head">Veterans Health Administration</h2>
     <div class="iapp-detail-group">
-            <span class="iapp-detail-data-label">Total Medical Vacancies: </span>
-            <span class="iapp-detail-data-text label label-primary"><%= total_vacant_jobs %></span>
+            <span class="iapp-detail-data-label">Overall Medical Vacancies: </span>
+            <span class="iapp-detail-data-text label label-primary"><%= overall_percent_vacant %>%</span>
         </div>
     <h3 class="iapp-detail-sub-head">National Overview</h3>
     <div class="iapp-detail-chart"></div>
@@ -11,13 +11,13 @@
             <span class="iapp-detail-key-color police"></span>
             <span class="iapp-detail-key-text">Vacant Positions: </span>
             <br/>
-            <span class="iapp-detail-key-item-number"><%=overall_percent_vacant%>%</span>
+            <span class="iapp-detail-key-item-number"><%=total_vacant_jobs%></span>
         </div>
         <div class="iapp-detail-key-item">
             <span class="iapp-detail-key-color driver"></span>
             <span class="iapp-detail-key-text">Filled Positions:</span>
             <br/>
-            <span class="iapp-detail-key-item-number"><% print(100 - overall_percent_vacant)%>%</span>
+            <span class="iapp-detail-key-item-number"><% print(overall_jobs - total_vacant_jobs)%></span>
         </div>
 
         <!-- I removed one of the key items here -->
