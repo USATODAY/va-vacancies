@@ -27,7 +27,6 @@
         <thead>
             <tr>
                 <th>Health Care System</th>
-                <th>Location</th>
                 <th>Overall Vacancy</th>
                 <th>Critical Need</th>
                 <th>Critical Vacancy</th>
@@ -36,8 +35,7 @@
         <tbody>
         <% _.each(top_10, function(facility) { %>
             <tr>
-                <td><%= facility.facility %></td>
-                <td class="table-number"><%= facility.city %>, <%= facility.state %> </td>
+                <td><%= facility.facility %>, <%= facility.city %>, <%= facility.state %> </td>
                 <td class="table-number"><%print(Math.round(facility.overall_percent_vacant*10)/10)%>%</td>
                 <td class="table-number"><%= facility.critical_job %></td>
                 <td class="table-number"><%print(Math.round(facility.critical_vacancy_rate*10)/10)%>%</td>

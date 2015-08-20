@@ -139,11 +139,11 @@ __p += '<div class="iapp-detail-inner-wrap">\n    <h2 class="iapp-detail-head">V
 ((__t = (total_vacant_jobs)) == null ? '' : __t) +
 '</span>\n        </div>\n        <div class="iapp-detail-key-item">\n            <span class="iapp-detail-key-color driver"></span>\n            <span class="iapp-detail-key-text">Filled Positions:</span>\n            <br/>\n            <span class="iapp-detail-key-item-number">';
  print(overall_jobs - total_vacant_jobs);
-__p += '</span>\n        </div>\n\n        <!-- I removed one of the key items here -->\n    </div>\n    <h3 class="iapp-detail-sub-head">Systems with largest vacancies</h3>\n    <table class="table table-condensed">\n        <thead>\n            <tr>\n                <th>Health Care System</th>\n                <th>Location</th>\n                <th>Overall Vacancy</th>\n                <th>Critical Need</th>\n                <th>Critical Vacancy</th>\n            </tr>\n        </thead>\n        <tbody>\n        ';
+__p += '</span>\n        </div>\n\n        <!-- I removed one of the key items here -->\n    </div>\n    <h3 class="iapp-detail-sub-head">Systems with largest vacancies</h3>\n    <table class="table table-condensed">\n        <thead>\n            <tr>\n                <th>Health Care System</th>\n                <th>Overall Vacancy</th>\n                <th>Critical Need</th>\n                <th>Critical Vacancy</th>\n            </tr>\n        </thead>\n        <tbody>\n        ';
  _.each(top_10, function(facility) { ;
 __p += '\n            <tr>\n                <td>' +
 ((__t = ( facility.facility )) == null ? '' : __t) +
-'</td>\n                <td class="table-number">' +
+', ' +
 ((__t = ( facility.city )) == null ? '' : __t) +
 ', ' +
 ((__t = ( facility.state )) == null ? '' : __t) +
