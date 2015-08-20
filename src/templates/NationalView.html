@@ -11,13 +11,13 @@
             <span class="iapp-detail-key-color police"></span>
             <span class="iapp-detail-key-text">Vacant Positions: </span>
             <br/>
-            <span class="iapp-detail-key-item-number"><%=overall_percent_vacant%></span>
+            <span class="iapp-detail-key-item-number"><%=overall_percent_vacant%>%</span>
         </div>
         <div class="iapp-detail-key-item">
             <span class="iapp-detail-key-color driver"></span>
             <span class="iapp-detail-key-text">Filled Positions:</span>
             <br/>
-            <span class="iapp-detail-key-item-number"><% print(100 - overall_percent_vacant)%></span>
+            <span class="iapp-detail-key-item-number"><% print(100 - overall_percent_vacant)%>%</span>
         </div>
 
         <!-- I removed one of the key items here -->
@@ -38,7 +38,7 @@
             <tr>
                 <td><%= facility.facility %></td>
                 <td class="table-number"><%= facility.city %>, <%= facility.state %> </td>
-                <td class="table-number"><%print(Math.round(overall_percent_vacant*10)/10)%>%</td>
+                <td class="table-number"><%print(Math.round(facility.overall_percent_vacant*10)/10)%>%</td>
                 <td class="table-number"><%= facility.critical_job %></td>
                 <td class="table-number"><%print(Math.round(facility.critical_vacancy_rate*10)/10)%>%</td>
             </tr>

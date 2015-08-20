@@ -3,7 +3,7 @@
     <p><td class="table-number"><%=city%>, <%=state%> </td></p>
     <div class="iapp-detail-group">
             <span class="iapp-detail-data-label"> </span>
-            <span class="iapp-detail-data-text label label-primary"><%= pct_appts_over_30_day %>%</span><span> of pending appointments not fulfilled within 30 days of the patient’s desired date.</span>
+            <span class="iapp-detail-data-text label label-primary"><%print(Math.round(pct_appts_over_30_day*10)/10)%>%</span><span> of pending appointments not fulfilled within 30 days of the patient’s desired date.</span>
             
         </div>
     <h3 class="iapp-detail-sub-head">Region Overview</h3>
@@ -19,7 +19,7 @@
             <span class="iapp-detail-key-color driver"></span>
             <span class="iapp-detail-key-text">Filled Positions:</span>
             <br/>
-            <span class="iapp-detail-key-item-number"><%= overall_jobs%></span>
+            <span class="iapp-detail-key-item-number"><% print(overall_jobs - (Math.round(positions_vacant*10)/10))%></span>
         </div>
     </div>
     <h3 class="iapp-detail-sub-head">Region Breakdown</h3>
