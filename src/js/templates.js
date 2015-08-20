@@ -44,7 +44,7 @@ __p += '%</span><span> of pending appointments not fulfilled within 30 days of t
 __p += '</span>\n        </div>\n    </div>\n    <h3 class="iapp-detail-sub-head">Region Breakdown</h3>\n       <table class="table table-condensed">\n            <tr>\n                <th>Overall Vacancy</th>\n                <td class="table-number">';
 print(Math.round(overall_percent_vacant*10)/10);
 __p += '%</td>\n                <td class="table-number">';
-print(Math.round(overall_percent_vacant*10)/10);
+print(Math.round(national_overall*10)/10);
 __p += '%</td>\n            </tr>\n            <tr>\n                <th>Schedulers / Workflow Assistants</th>\n                <td class="table-number">';
 print(Math.round(scheduler_clinic_workflow*10)/10);
 __p += '%</td>\n                <td class="table-number">';
