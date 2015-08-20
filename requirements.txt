@@ -1,1 +1,4 @@
+jellyfish==0.5.1
+us==0.9.1
+wsgiref==0.1.2
 xlrd==0.9.3
