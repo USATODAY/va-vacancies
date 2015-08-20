@@ -54,7 +54,7 @@ define([
         filterItems: _.throttle(function(filterTerm) {
             filterTerm = helpers.slugify(filterTerm);
             var filteredArray = this.collection.filter(function(entryModel) {
-                return entryModel.get("slug").indexOf(filterTerm) > -1 || helpers.slugify(entryModel.get("city")).indexOf(filterTerm) > -1 || helpers.slugify(entryModel.get("state")).indexOf(filterTerm) > -1;
+                return entryModel.get("slug").indexOf(filterTerm) > -1 || helpers.slugify(entryModel.get("city")).indexOf(filterTerm) > -1 || helpers.slugify(entryModel.get("state")).indexOf(filterTerm) > -1 || helpers.slugify(entryModel.get("full_state")).indexOf(filterTerm) > -1;
             });
             return filteredArray;
         }, 300),
