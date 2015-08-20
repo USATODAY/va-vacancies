@@ -6,7 +6,7 @@ this["templates"]["AppView.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div class="iapp-search-wrap iapp-fade">\n    <div class="iapp-search ">\n        <div class="iapp-header">Critical vacancies at the VA</div>\n                <p class="iapp-chatter">The Veterans Health Administration had thousands of medical jobs unfilled as of July 15. At some hospitals, half of many critical jobs are open, resulting in long waits for care. Search by facility, city or state for details and wait times.</p>\n        <div class="iapp-search-input-group">\n            <img class="iapp-search-icon" src="http://www.gannett-cdn.com/experiments/usatoday/2015/07/rape-kits/img/search-icon.svg" alt="Info">\n            <input class="iapp-search-input" type="text" placeholder="Search by VA facility, state or city. ">\n        </div>\n        <div class="iapp-search-results-wrap" style="display: none">\n            <div class="iapp-search-results-inner-wrap"></div>\n        </div>\n        <div class="iapp-detail-container"></div>\n    </div>\n    <div class="iapp-info-button">\n        <img src="http://www.gannett-cdn.com/experiments/usatoday/2015/07/rape-kits/img/question-icon.svg" alt="Info">\n    </div>\n</div>\n\n<div class="iapp-info-wrap">\n    <div class="iapp-info-close"><img src="http://www.gannett-cdn.com/experiments/usatoday/2015/07/rape-kits/img/close-icon-white.svg" alt="close"></div>\n    <div class="iapp-info-inner-wrap">\n        <h3 class="iapp-info-header">Credits</h3>\n        <p class="iapp-info-p">Meghan Hoyer, Jodi Upton, Mitchell Thorson, Shawn SUllivan, USA TODAY</p>\n    </div>\n    <div class="iapp-detail-background js-iapp-info-background"></div>\n</div>\n<div class="iapp-mobile-video-container"></div>\n';
+__p += '<div class="iapp-search-wrap iapp-fade">\n    <div class="iapp-search ">\n        <div class="iapp-header">Critical vacancies at the VA</div>\n                <p class="iapp-chatter">The Veterans Health Administration had thousands of medical jobs unfilled as of July 15. At some hospitals, half of many critical jobs are open, resulting in long waits for care. Search by facility, city or state for details and wait times.</p>\n        <div class="iapp-search-input-group">\n            <img class="iapp-search-icon" src="http://www.gannett-cdn.com/experiments/usatoday/2015/07/rape-kits/img/search-icon.svg" alt="Info">\n            <input class="iapp-search-input" type="text" placeholder="Search by VA facility, state or city. ">\n        </div>\n        <div class="iapp-search-results-wrap" style="display: none">\n            <div class="iapp-search-results-inner-wrap"></div>\n        </div>\n        <div class="iapp-detail-container"></div>\n    </div>\n    <div class="iapp-info-button">\n        <img src="http://www.gannett-cdn.com/experiments/usatoday/2015/07/rape-kits/img/question-icon.svg" alt="Info">\n    </div>\n</div>\n\n<div class="iapp-info-wrap">\n    <div class="iapp-info-close"><img src="http://www.gannett-cdn.com/experiments/usatoday/2015/07/rape-kits/img/close-icon-white.svg" alt="close"></div>\n    <div class="iapp-info-inner-wrap">\n        <h3 class="iapp-info-header">Credits</h3>\n        <p class="iapp-info-p">Meghan Hoyer, Jodi Upton, Mitchell Thorson, Shawn Sullivan, USA TODAY</p>\n    </div>\n    <div class="iapp-detail-background js-iapp-info-background"></div>\n</div>\n<div class="iapp-mobile-video-container"></div>\n\n<h4 class="iapp-detail-info">Source: Veterans Affairs Administration</h4>';
 
 }
 return __p
@@ -43,19 +43,33 @@ __p += '%</span><span> of pending appointments not fulfilled within 30 days of t
  print(overall_jobs - (Math.round(positions_vacant*10)/10));
 __p += '</span>\n        </div>\n    </div>\n    <h3 class="iapp-detail-sub-head">Region Breakdown</h3>\n       <table class="table table-condensed">\n            <tr>\n                <th>Overall Vacancy</th>\n                <td class="table-number">';
 print(Math.round(overall_percent_vacant*10)/10);
+__p += '%</td>\n                <td class="table-number">';
+print(Math.round(overall_percent_vacant*10)/10);
 __p += '%</td>\n            </tr>\n            <tr>\n                <th>Schedulers / Workflow Assistants</th>\n                <td class="table-number">';
 print(Math.round(scheduler_clinic_workflow*10)/10);
+__p += '%</td>\n                <td class="table-number">';
+print(Math.round(national_scheduler_clinic_workflow*10)/10);
 __p += '%</td>\n            </tr>\n            <tr>\n                <th>Nurses</th>\n                <td class="table-number">';
 print(Math.round(nurse*10)/10);
+__p += '%</td>\n                <td class="table-number">';
+print(Math.round(national_nurse*10)/10);
 __p += '%</td>\n            </tr>\n            <tr>\n                <th>Physical Therapists</th>\n                <td class="table-number">';
 print(Math.round(physical_therapist*10)/10);
+__p += '%</td>\n                <td class="table-number">';
+print(Math.round(national_physical_therapist*10)/10);
 __p += '%</td>\n            </tr>\n            <tr>\n                <th>Physicians</th>\n                <td class="table-number">';
 print(Math.round(physician*10)/10);
+__p += '%</td>\n                <td class="table-number">';
+print(Math.round(national_physician*10)/10);
 __p += '%</td>\n            </tr>\n            <tr>\n                <th>Physician Assistants</th>\n                <td class="table-number">';
 print(Math.round(physician_assistant*10)/10);
+__p += '%</td>\n                <td class="table-number">';
+print(Math.round(national_physician_assistant*10)/10);
 __p += '%</td>\n            </tr>\n            <tr>\n                <th>Psychologists</th>\n                <td class="table-number">';
 print(Math.round(psychology*10)/10);
-__p += '%</td>\n            </tr>\n        </table>\n</div>\n<div class="iapp-detail-share-wrap">\n    <span class="iapp-detail-share-button">Share</span>\n    <div class="iapp-share-icon-wrap">\n        <a href="https://twitter.com/intent/tweet?url=' +
+__p += '%</td>\n                <td class="table-number">';
+print(Math.round(national_psychology*10)/10);
+__p += '%</td>\n            </tr>\n        </table>\n        <h4 class="iapp-detail-info">Source: Veterans Affairs Administration</h4>\n</div>\n<div class="iapp-detail-share-wrap">\n    <span class="iapp-detail-share-button">Share</span>\n    <div class="iapp-share-icon-wrap">\n        <a href="https://twitter.com/intent/tweet?url=' +
 ((__t = (twitterShare)) == null ? '' : __t) +
 '&text=' +
 ((__t = (encodedShare)) == null ? '' : __t) +
@@ -141,7 +155,7 @@ __p += '%</td>\n                <td class="table-number">' +
 print(Math.round(facility.critical_vacancy_rate*10)/10);
 __p += '%</td>\n            </tr>\n        ';
  }); ;
-__p += '\n        </tbody>\n    </table>\n</div>\n<div class="iapp-detail-share-wrap">\n    <span class="iapp-detail-share-button">Share</span>\n    <div class="iapp-share-icon-wrap">\n        <a href="https://twitter.com/intent/tweet?url=' +
+__p += '\n        </tbody>\n    </table>\n    <h4 class="iapp-detail-info">Source: Veterans Affairs Administration</h4>\n</div>\n<div class="iapp-detail-share-wrap">\n    <span class="iapp-detail-share-button">Share</span>\n    <div class="iapp-share-icon-wrap">\n        <a href="https://twitter.com/intent/tweet?url=' +
 ((__t = (twitterShare)) == null ? '' : __t) +
 '&text=' +
 ((__t = (encodedShare)) == null ? '' : __t) +
