@@ -3,9 +3,11 @@ import us
 def parse(raw_data):
     entries = raw_data["local_lookup"]
     parsed_entries = []
+    national_entry = format_national(raw_data)
     for entry in entries:
+        entry["national_overall"] = national_entry["overall_percent_vacant"]
         parsed_entries.append(get_full_state_name(entry))
-    parsed_entries.append(format_national(raw_data))
+    parsed_entries.append(national_entry)
     return parsed_entries
 
 def get_full_state_name(entry):
